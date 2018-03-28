@@ -1,37 +1,47 @@
 import media
 import fresh_tomatoes
-toy_story = media.Movie("Toy Story",
-                        "A story of a boy and his toys that come to life",
-                        "https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg",
-                        "https://www.youtube.com/watch?v=KYz2wyBy3kc")
-#print(toy_story.storyline)
-avatar = media.Movie("Avatar",
-                     "A marine on an alien planet",
-                     "https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar-Teaser-Poster.jpg",
-                     "https://www.youtube.com/watch?v=5PSNL1qE6VY")
-#print(avatar.storyline)
-#avatar.show_trailer()
-school_of_rock = media.Movie("School of rock",
-                        "Using rock music to learn",
-                        "https://upload.wikimedia.org/wikipedia/en/1/11/School_of_Rock_Poster.jpg",
-                        "https://www.youtube.com/watch?v=3PsUJFEBC74")
-ratatouille = media.Movie("Ratatouille",
-                        "A rat is a chef in Paris",
-                        "https://upload.wikimedia.org/wikipedia/en/5/50/RatatouillePoster.jpg",
-                        "https://www.youtube.com/watch?v=c3sBBRxDAqk")
-midnight_in_paris = media.Movie("Midnight in Paris",
-                        "Going back in time to meet authors",
-                        "https://upload.wikimedia.org/wikipedia/en/9/9f/Midnight_in_Paris_Poster.jpg",
-                        "https://www.youtube.com/watch?v=FAfR8omt-CY")
-hunger_games = media.Movie("The Hunger Games",
-                        "A really real reality show",
-                        "https://upload.wikimedia.org/wikipedia/en/4/42/HungerGamesPoster.jpg",
-                        "https://www.youtube.com/watch?v=4S9a5V9ODuY")
-#movies = [ toy_story, avatar, school_of_rock, ratatouille, midnight_in_paris, hunger_games]
-#fresh_tomatoes.open_movies_page (movies)
-print(media.Movie.VALID_RATINGS)
-print(media.Movie.__doc__)
-print(media.Movie.__name__)
-print(media.Movie.__module__)
+
+# Create all the movies information
+StarWarsI = media.Movie("Star Wars Episode I - The Phantom menace",
+                        "https://upload.wikimedia.org/wikipedia/en/4/40/Star_Wars_Phantom_Menace_poster.jpg",
+                        "https://www.youtube.com/watch?v=bD7bpG-zDJQ")
+
+StarWarsII = media.Movie("Star Wars Episode II - Attack of the Clones",
+                        "https://upload.wikimedia.org/wikipedia/en/3/32/Star_Wars_-_Episode_II_Attack_of_the_Clones_%28movie_poster%29.jpg",
+                        "https://www.youtube.com/watch?v=gYbW1F_c9eM")
+
+StarWarsIII = media.Movie("Star Wars Episode III - Revenge of the Sith",
+                        "https://upload.wikimedia.org/wikipedia/en/9/93/Star_Wars_Episode_III_Revenge_of_the_Sith_poster.jpg",
+                        "https://www.youtube.com/watch?v=5UnjrG_N8hU")
+
+StarWarsIV = media.Movie("Star Wars Episode IV - A new hope",
+                        "https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg",
+                        "https://www.youtube.com/watch?v=367FSjWvNB4")
+
+StarWarsV = media.Movie("Star Wars Episode V - The empire strikes back",
+                        "https://upload.wikimedia.org/wikipedia/en/3/3c/SW_-_Empire_Strikes_Back.jpg",
+                        "https://www.youtube.com/watch?v=JNwNXF9Y6kY")
+
+StarWarsVI = media.Movie("Star Wars Episode VI - Return of the Jedi",
+                        "https://upload.wikimedia.org/wikipedia/en/b/b2/ReturnOfTheJediPoster1983.jpg",
+                        "https://www.youtube.com/watch?v=5UfA_aKBGMc")
+
+StarWarsVII = media.Movie("Star Wars Episode VII - The force awakens",
+                        "https://upload.wikimedia.org/wikipedia/en/a/a2/Star_Wars_The_Force_Awakens_Theatrical_Poster.jpg",
+                        "https://www.youtube.com/watch?v=sGbxmsDFVnE")
+
+StarWarsVIII = media.Movie("Star Wars Episode VIII - The last Jedi",
+                        "https://upload.wikimedia.org/wikipedia/en/7/7f/Star_Wars_The_Last_Jedi.jpg",
+                        "https://www.youtube.com/watch?v=HqVSuqJrU1I")
+
+StarWarsStoryI = media.Movie("Rogue one - a Star Wars Story",
+                        "https://upload.wikimedia.org/wikipedia/en/d/d4/Rogue_One%2C_A_Star_Wars_Story_poster.png",
+                        "https://www.youtube.com/watch?v=frdj1zb9sMY")
+
+#Collect all movie in a list in order to pass to the open_movies_pages function
+movies = [ StarWarsI, StarWarsII, StarWarsIII, StarWarsIV, StarWarsV, StarWarsVI, StarWarsVII, StarWarsVIII, StarWarsStoryI]
+
+#Generates HTML page with all the movies
+fresh_tomatoes.open_movies_page (movies)
 
 
